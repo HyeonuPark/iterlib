@@ -1,0 +1,8 @@
+src
+test
+local
+.gitignore
+.npmignore
+.babelrc
+.travis.yml
+npm*.log
