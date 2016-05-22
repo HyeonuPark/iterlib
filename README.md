@@ -174,3 +174,37 @@ function hasFOO () {
 hasFOO('FOO', 'Foo', 'foo') // true
 hasFOO('FOo', 'FoO', 'fOO') // false
 ```
+
+# Milestone
+
+## Original helper functions
+
+- [x] resolve
+- [x] range
+- [x] toArray
+
+## Methods in `Array`
+
+- [ ] concat
+- [x] every
+- [x] filter
+- [ ] find
+- [ ] forEach
+- [ ] includes
+- [x] map
+- [ ] reduce
+- [x] some
+
+## Utilities in lodash
+
+- [ ] chunk
+- [ ] compact
+- [ ] drop
+- [ ] dropWhile
+- [ ] flatten
+- [ ] flattenDeep
+- [ ] flattenDepth
+- [ ] head
+- [ ] take
+- [ ] takeWhile
+- [ ] flatMap
