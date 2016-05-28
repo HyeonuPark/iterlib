@@ -10,6 +10,10 @@ export function getSelf () {
   return this
 }
 
+export const freeze = Object.freeze || (arg => arg)
+
+export const doneTrue = freeze({done: true})
+
 export function assertType (value, type, valueName) {
   const actualType = typeof value
 

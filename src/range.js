@@ -1,4 +1,4 @@
-import {assertType, itersym, getSelf} from './util'
+import {assertType, itersym, freeze, doneTrue} from './util'
 
 export function range (start, end, step = 1) {
   if (end === void 0) {
@@ -11,24 +11,31 @@ export function range (start, end, step = 1) {
   assertType(step, 'number', 'range() argument')
 
   const descending = step < 0
-  let value = start - step
-  let isDone = false
 
-  return {
-    [itersym]: getSelf,
-    next () {
-      if (isDone) {
-        return {done: true}
-      }
+  return freeze({
+    start,
+    end,
+    step,
+    [itersym] () {
+      let value = start - step
+      let isDone = false
 
-      value += step
+      return freeze({
+        next () {
+          if (isDone) {
+            return doneTrue
+          }
 
-      if (descending ? value <= end : value >= end) {
-        isDone = true
-        return {done: true, value}
-      }
+          value += step
 
-      return {done: false, value}
+          if (descending ? value <= end : value >= end) {
+            isDone = true
+            return {done: true, value}
+          }
+
+          return {done: false, value}
+        }
+      })
     }
-  }
+  })
 }
