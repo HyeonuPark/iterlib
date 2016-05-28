@@ -22,7 +22,6 @@ describe('::product()', () => {
       start: 0,
       * [Symbol.iterator] () {
         const {start} = this
-        console.log(start)
         yield start
         yield start + 1
         this.start = start + 2
