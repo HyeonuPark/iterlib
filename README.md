@@ -186,7 +186,7 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 
 ## Original methods
 
-- [ ] indexed
+- [x] indexed
 
 ## Methods in `Array`
 
