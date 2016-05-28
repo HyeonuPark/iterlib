@@ -1,10 +1,11 @@
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {map} from '../src/map'
 
 describe('::map()', () => {
   it('should iterate the results of calling callback with all element', () => {
-    function* gen () {
+    function * gen () {
       yield 3
       yield 4
       yield 5

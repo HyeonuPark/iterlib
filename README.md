@@ -183,6 +183,11 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 - [x] range
 - [x] toArray
 
+## Original methods
+
+- [ ] product
+- [ ] indexed
+
 ## Methods in `Array`
 
 - [ ] concat

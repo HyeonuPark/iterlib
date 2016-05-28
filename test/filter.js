@@ -1,10 +1,11 @@
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {filter} from '../src/filter'
 
 describe('::filter()', () => {
   it('should only iterate the elements that passed the test', () => {
-    function* gen () {
+    function * gen () {
       yield 3
       yield 4
       yield 5

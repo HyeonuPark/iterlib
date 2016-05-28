@@ -1,17 +1,18 @@
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {toArray} from '../src/toArray'
 
 describe('::toArray()', () => {
   it('should collect all iterated elements to array', () => {
-    function* gen1 () {
+    function * gen1 () {
       yield 3
       yield 4
       yield 5
     }
 
-    function* gen2 () {
-      yield* gen1()
+    function * gen2 () {
+      yield * gen1()
       yield 6
       yield 7
     }

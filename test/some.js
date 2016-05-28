@@ -1,10 +1,11 @@
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {some} from '../src/some'
 
 describe('::some()', () => {
   it('should return true when at least 1 element is passed the test', () => {
-    function* gen() {
+    function * gen () {
       yield 3
       yield 4
       yield 5
@@ -20,7 +21,7 @@ describe('::some()', () => {
   })
 
   it('should return false when all elements are failed the test', () => {
-    function* gen () {
+    function * gen () {
       yield 3
       yield 4
       yield 5
@@ -38,7 +39,7 @@ describe('::some()', () => {
   it('should treat non-function test as a equality checker', () => {
     const obj = {}
 
-    function* gen (arg) {
+    function * gen (arg) {
       yield arg
     }
 

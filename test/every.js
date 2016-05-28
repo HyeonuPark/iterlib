@@ -1,10 +1,11 @@
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {every} from '../src/every'
 
 describe('::every()', () => {
   it('should return false when at least 1 element is failed the test', () => {
-    function* gen () {
+    function * gen () {
       yield 3
       yield 4
       yield 5
@@ -20,7 +21,7 @@ describe('::every()', () => {
   })
 
   it('should return true when all elements are passed the test', () => {
-    function* gen () {
+    function * gen () {
       yield 3
       yield 4
       yield 5
@@ -38,7 +39,7 @@ describe('::every()', () => {
   it('should treat non-function test as a equality checker', () => {
     const obj = {}
 
-    function* gen (arg) {
+    function * gen (arg) {
       yield arg
     }
 
