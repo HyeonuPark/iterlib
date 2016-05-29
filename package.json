@@ -7,8 +7,7 @@
     "build": "NODE_ENV=production babel src --out-dir bin",
     "test": "mocha test --require babel-polyfill --require babel-register",
     "preversion": "npm test",
-    "version": "git checkout master && git merge dev",
-    "postversion": "npm run build && npm publish && git push origin master --tags && git checkout dev"
+    "postversion": "npm run build && npm publish && git checkout master && git merge dev && git push origin master --tags && git checkout dev"
   },
   "repository": {
     "type": "git",
