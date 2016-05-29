@@ -4,7 +4,7 @@ import {expect} from 'chai'
 import {product} from '../src/product'
 
 describe('::product()', () => {
-  it('should iterate all possible sets of given iterables', () => {
+  it('should iterate all possible sets of given iterables\' elements', () => {
     const result = product(['a', 'b', 'c'], ['d', 'e'], 'f')
 
     expect([...result]).to.lengthOf(6).and.deep.equal([

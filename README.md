@@ -69,7 +69,25 @@ const arr4 = [...range(4, 1, -1)] // [4, 3, 2]
 
 #### Rule
 
-- `product(...iterables)`
+- `product(...iterables)` -> iterate all possible sets of given iterables' elements
+
+#### Usage
+
+```js
+import {product, range} from 'iterlib'
+
+for (let [x, y, z] of product(range(1), range(2), range(3))) {
+  console.log(`(${x}, ${y}, ${z})`)
+}
+
+// result:
+// (0, 0, 0)
+// (0, 0, 1)
+// (0, 0, 2)
+// (0, 1, 0)
+// (0, 1, 1)
+// (0, 1, 2)
+```
 
 ## Pipeline virtual methods
 
