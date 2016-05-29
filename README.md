@@ -65,6 +65,12 @@ const arr3 = [...range(1, 7, 2)] // [1, 3, 5]
 const arr4 = [...range(4, 1, -1)] // [4, 3, 2]
 ```
 
+### product()
+
+#### Rule
+
+- `product(...iterables)`
+
 ## Pipeline virtual methods
 
 Virtual methods that generate another iterator
@@ -181,12 +187,12 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 
 - [x] resolve
 - [x] range
-- [x] toArray
 - [x] product
 
 ## Original methods
 
 - [x] indexed
+- [x] toArray
 
 ## Methods in `Array`
 

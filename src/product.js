@@ -1,3 +1,4 @@
+import {resolve} from './resolve'
 import {map} from './map'
 
 // TODO: implement without generator
@@ -11,7 +12,7 @@ export function * product (...iterables) {
     return
   }
 
-  for (let elem of iterables[0]) {
+  for (let elem of resolve(iterables[0])) {
     for (let subset of product(...iterables.slice(1))) {
       subset.unshift(elem)
       yield subset
