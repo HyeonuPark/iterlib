@@ -1,6 +1,8 @@
 iterlib
 ========
 
+[![Build Status](https://travis-ci.org/HyeonuPark/iterlib.svg?branch=master)](https://travis-ci.org/HyeonuPark/iterlib) [![Codecov](https://img.shields.io/codecov/c/github/hyeonupark/iterlib.svg?maxAge=2592000)]()
+
 Array#map and similars for all [iterables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), with [function-bind syntax](https://github.com/zenparsing/es-function-bind#examples)
 
 # Reference
