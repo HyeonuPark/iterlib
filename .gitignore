@@ -1,4 +1,5 @@
 node_modules
 bin
 local
+coverage
 npm*.log

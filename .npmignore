@@ -1,6 +1,7 @@
 src
 test
 local
+coverage
 .gitignore
 .npmignore
 .babelrc

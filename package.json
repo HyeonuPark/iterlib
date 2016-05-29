@@ -6,6 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir bin",
     "test": "mocha test --require babel-polyfill --require babel-register",
+    "codecov": "babel-node $(npm bin)/isparta cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test --require babel-polyfill -R spec && codecov",
     "preversion": "npm test",
     "postversion": "npm run build && npm publish && git checkout master && git merge dev && git push origin dev master --tags && git checkout dev"
   },
@@ -33,10 +34,12 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "eslint": "^2.11.0",
     "eslint-config-standard": "^5.3.1",
     "eslint-plugin-promise": "^1.3.1",
     "eslint-plugin-standard": "^1.3.2",
+    "isparta": "^4.0.0",
     "mocha": "^2.4.5"
   }
 }
