@@ -2,9 +2,11 @@
   "name": "iterlib",
   "version": "1.1.1",
   "description": "Iterator utilities for function-bind syntax",
-  "main": "bin/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir bin",
+    "build:es5": "NODE_ENV=production babel src --out-dir es5",
+    "build:es6": "NODE_ENV=es6 babel src --out-dir es6",
+    "build": "rm -rf es5 es6 && npm run build:es5 && npm run build:es6",
     "test": "mocha test --require babel-polyfill --require babel-register",
     "codecov": "babel-node $(npm bin)/isparta cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test --require babel-polyfill -R spec && codecov",
     "preversion": "npm test",

@@ -1,9 +1,11 @@
 iterlib
 ========
 
-[![Build Status](https://travis-ci.org/HyeonuPark/iterlib.svg?branch=master)](https://travis-ci.org/HyeonuPark/iterlib) [![Codecov](https://img.shields.io/codecov/c/github/hyeonupark/iterlib.svg?maxAge=2592000)]()
-
 Array#map and similars for all [iterables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), with [function-bind syntax](https://github.com/zenparsing/es-function-bind#examples)
+
+- [![Build Status](https://travis-ci.org/HyeonuPark/iterlib.svg?branch=master)](https://travis-ci.org/HyeonuPark/iterlib) [![codecov](https://codecov.io/gh/HyeonuPark/iterlib/branch/master/graph/badge.svg)](https://codecov.io/gh/HyeonuPark/iterlib) - master
+
+- [![Build Status](https://travis-ci.org/HyeonuPark/iterlib.svg?branch=dev)](https://travis-ci.org/HyeonuPark/iterlib) [![codecov](https://codecov.io/gh/HyeonuPark/iterlib/branch/dev/graph/badge.svg)](https://codecov.io/gh/HyeonuPark/iterlib) - dev
 
 # Reference
 

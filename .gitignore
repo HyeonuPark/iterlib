@@ -1,5 +1,6 @@
 node_modules
-bin
+es5
+es6
 local
 coverage
 npm*.log
