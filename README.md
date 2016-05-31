@@ -213,6 +213,7 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 
 ## Original methods
 
+- [ ] buffer
 - [x] indexed
 - [x] toArray
 
@@ -222,8 +223,6 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 - [x] every
 - [x] filter
 - [ ] find
-- [ ] forEach
-- [ ] includes
 - [x] map
 - [x] reduce
 - [x] some
@@ -235,9 +234,8 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 - [ ] drop
 - [ ] dropWhile
 - [x] flatten
-- [ ] flattenDeep
 - [ ] flattenDepth
 - [ ] head
 - [ ] take
 - [ ] takeWhile
-- [ ] flatMap
+- [x] flatMap
