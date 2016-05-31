@@ -234,7 +234,7 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 - [ ] compact
 - [ ] drop
 - [ ] dropWhile
-- [ ] flatten
+- [x] flatten
 - [ ] flattenDeep
 - [ ] flattenDepth
 - [ ] head
