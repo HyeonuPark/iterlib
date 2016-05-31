@@ -1,4 +1,4 @@
-import {describe, before, it} from 'mocha'
+import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
 import {flatten} from '../src/flatten'

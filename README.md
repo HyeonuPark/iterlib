@@ -225,7 +225,7 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 - [ ] forEach
 - [ ] includes
 - [x] map
-- [ ] reduce
+- [x] reduce
 - [x] some
 
 ## Utilities in lodash
