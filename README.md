@@ -219,7 +219,7 @@ hasFOO('FOo', 'FoO', 'fOO') // false
 
 ## Methods in `Array`
 
-- [ ] concat
+- [x] concat
 - [x] every
 - [x] filter
 - [ ] find

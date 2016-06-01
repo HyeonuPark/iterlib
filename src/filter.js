@@ -9,7 +9,7 @@ export function filter (callback) {
 
   return {
     [itersym]: getSelf,
-    return (returnValue)  {
+    return (returnValue) {
       return typeof iterator.return === 'function'
         ? iterator.return(returnValue)
         : returnValue

@@ -4,10 +4,10 @@
   "description": "Iterator utilities for function-bind syntax",
   "main": "index.js",
   "scripts": {
-    "build:es5": "NODE_ENV=production babel src --out-dir es5",
-    "build:es6": "NODE_ENV=es6 babel src --out-dir es6",
-    "build": "rm -rf es5 es6 && npm run build:es5 && npm run build:es6",
-    "test": "mocha test --require babel-polyfill --require babel-register",
+    "build": "NODE_ENV=production babel src --out-dir bin",
+    "lint": "eslint -c ./eslint.config.json --fix src test",
+    "unit": "mocha test --require babel-polyfill --require babel-register",
+    "test": "npm run lint && npm run unit",
     "codecov": "babel-node $(npm bin)/isparta cover ./node_modules/mocha/bin/_mocha --report lcovonly -- test --require babel-polyfill -R spec && codecov",
     "preversion": "npm test",
     "postversion": "npm run build && npm publish && git checkout master && git merge dev && git push origin dev master --tags && git checkout dev"

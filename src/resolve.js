@@ -1,15 +1,4 @@
-import {itersym, isIterable} from './util'
-
-const DONE = Object.freeze({done: true})
-
-const emptyIterable = Object.freeze({
-  [itersym] () {
-    return this
-  },
-  next () {
-    return DONE
-  }
-})
+import {doneTrue, emptyIterable, itersym, isIterable} from './util'
 
 function singleIterable (element) {
   let done = false
@@ -20,7 +9,7 @@ function singleIterable (element) {
     },
     next () {
       if (done) {
-        return DONE
+        return doneTrue
       }
       done = true
       return {done: false, value: element}
@@ -28,7 +17,7 @@ function singleIterable (element) {
   }
 }
 
-const GLOBAL = (function(){return this})()
+const GLOBAL = (function () { return this })()
 
 function unwrap (maybeWrapper) {
   const {constructor} = maybeWrapper

@@ -10,9 +10,18 @@ export function getSelf () {
   return this
 }
 
-export const freeze = Object.freeze || (arg => arg)
+export const freeze = Object.freeze
 
 export const doneTrue = freeze({done: true})
+
+export const emptyIterable = freeze({
+  [itersym] () {
+    return this
+  },
+  next () {
+    return doneTrue
+  }
+})
 
 export function assertType (value, type, valueName) {
   const actualType = typeof value
