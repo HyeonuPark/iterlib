@@ -2,7 +2,7 @@
   "name": "iterlib",
   "version": "1.3.0",
   "description": "Iterator utilities for function-bind syntax",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir bin",
     "lint": "eslint -c ./eslint.config.json --fix src test",
