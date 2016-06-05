@@ -1,5 +1,5 @@
 import {resolve} from './resolve'
-import {itersym, getSelf} from './util'
+import {itersym, getSelf, forwardReturn} from './util'
 
 export function indexed () {
   const iterator = resolve(this)[itersym]()
@@ -8,11 +8,7 @@ export function indexed () {
 
   return {
     [itersym]: getSelf,
-    return (returnValue) {
-      return typeof iterator.return === 'function'
-        ? iterator.return(returnValue)
-        : returnValue
-    },
+    return: forwardReturn(iterator),
     next () {
       if (isDone) {
         return {done: true}

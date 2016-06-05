@@ -1,5 +1,5 @@
 import {resolve} from './resolve'
-import {assertType, itersym, getSelf} from './util'
+import {assertType, itersym, getSelf, forwardReturn} from './util'
 
 export function map (callback) {
   assertType(callback, 'function', '::map() callback')
@@ -9,11 +9,7 @@ export function map (callback) {
 
   return {
     [itersym]: getSelf,
-    return (returnValue) {
-      return typeof iterator.return === 'function'
-        ? iterator.return(returnValue)
-        : returnValue
-    },
+    return: forwardReturn(iterator),
     next () {
       if (isDone) {
         return {done: true}

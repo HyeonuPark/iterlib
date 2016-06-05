@@ -30,3 +30,12 @@ export function assertType (value, type, valueName) {
     throw new Error(`Expected ${valueName} to ${type}, but got ${actualType}`)
   }
 }
+
+export function forwardReturn (iterator) {
+  return arg => {
+    if (iterator && typeof iterator.return === 'function') {
+      return iterator.return(arg)
+    }
+    return arg
+  }
+}

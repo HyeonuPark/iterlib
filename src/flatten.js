@@ -1,5 +1,5 @@
 import {resolve} from './resolve'
-import {itersym, freeze, getSelf, doneTrue} from './util'
+import {itersym, freeze, getSelf, doneTrue, forwardReturn} from './util'
 
 export function flatten () {
   const container = resolve(this)[itersym]()
@@ -9,6 +9,7 @@ export function flatten () {
 
   return freeze({
     [itersym]: getSelf,
+    return: forwardReturn(iterator),
     next () {
       if (containerDone) {
         return doneTrue
@@ -35,12 +36,6 @@ export function flatten () {
       }
 
       return result
-    },
-    return (arg) {
-      if (iterator && typeof iterator.return === 'function') {
-        return iterator.return(arg)
-      }
-      return arg
     }
   })
 }
