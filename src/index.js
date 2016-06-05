@@ -2,11 +2,14 @@ export {resolve} from './resolve'
 export {range} from './range'
 export {product} from './product'
 
+export {concat} from './concat'
+export {filter} from './filter'
+export {flatMap} from './flatMap'
+export {flatten} from './flatten'
 export {indexed} from './indexed'
-export {toArray} from './toArray'
+export {map} from './map'
 
 export {every} from './every'
-export {filter} from './filter'
-
-export {map} from './map'
+export {reduce} from './reduce'
 export {some} from './some'
+export {toArray} from './toArray'
