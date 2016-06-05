@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {reduce} from '../src/reduce'
+import {reduce} from '../src/index'
 
 describe('::reduce()', () => {
   it('should reduce iterable to value', () => {

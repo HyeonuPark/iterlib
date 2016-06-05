@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {map} from '../src/map'
+import {map} from '../src/index'
 
 describe('::map()', () => {
   it('should iterate the results of calling callback with all element', () => {

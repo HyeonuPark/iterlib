@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {filter} from '../src/filter'
+import {filter} from '../src/index'
 
 describe('::filter()', () => {
   it('should only iterate the elements that passed the test', () => {

@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {flatMap} from '../src/flatMap'
+import {flatMap} from '../src/index'
 
 describe('::flatMap()', () => {
   it('should have same effect as itr::map()::flatten()', () => {

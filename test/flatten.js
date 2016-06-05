@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {flatten} from '../src/flatten'
+import {flatten} from '../src/index'
 
 describe('::flatten()', () => {
   it('should iterate elements of elements of given iterator', () => {

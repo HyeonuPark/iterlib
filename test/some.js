@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {some} from '../src/some'
+import {some} from '../src/index'
 
 describe('::some()', () => {
   it('should return true when at least 1 element is passed the test', () => {

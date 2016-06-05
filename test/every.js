@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {every} from '../src/every'
+import {every} from '../src/index'
 
 describe('::every()', () => {
   it('should return false when at least 1 element is failed the test', () => {

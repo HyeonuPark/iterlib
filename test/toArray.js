@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {toArray} from '../src/toArray'
+import {toArray} from '../src/index'
 
 describe('::toArray()', () => {
   it('should collect all iterated elements to array', () => {

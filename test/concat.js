@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {concat} from '../src/concat'
+import {concat} from '../src/index'
 
 describe('::concat()', () => {
   it('should iterate all elements from this and given iterables', () => {

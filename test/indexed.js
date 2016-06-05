@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {indexed} from '../src/indexed'
+import {indexed} from '../src/index'
 
 describe('::indexed()', () => {
   it('should iterate elements with index', () => {

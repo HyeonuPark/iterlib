@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {resolve} from '../src/resolve'
+import {resolve} from '../src/index'
 
 describe('resolve()', () => {
   it('should return argument back when it\'s already iterable', () => {

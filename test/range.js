@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {range} from '../src/range'
+import {range} from '../src/index'
 
 describe('range()', () => {
   it('should iterate integers from start to end-1', () => {

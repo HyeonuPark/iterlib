@@ -1,7 +1,7 @@
 import {describe, it} from 'mocha'
 import {expect} from 'chai'
 
-import {product} from '../src/product'
+import {product} from '../src/index'
 
 describe('::product()', () => {
   it('should iterate all possible sets of given iterables\' elements', () => {
