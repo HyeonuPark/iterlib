@@ -2,6 +2,7 @@ export {resolve} from './resolve'
 export {range} from './range'
 export {product} from './product'
 
+export {compact} from './compact'
 export {concat} from './concat'
 export {filter} from './filter'
 export {flatMap} from './flatMap'
