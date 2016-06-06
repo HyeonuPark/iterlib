@@ -8,6 +8,7 @@ export {concat} from './concat'
 export {filter} from './filter'
 export {flatMap} from './flatMap'
 export {flatten} from './flatten'
+export {flattenDepth} from './flattenDepth'
 export {indexed} from './indexed'
 export {map} from './map'
 

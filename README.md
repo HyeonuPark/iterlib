@@ -350,12 +350,12 @@ wrapArray(3, 4, 5) // [3, 4, 5]
 
 ## Utilities in lodash
 
-- [ ] chunk
+- [x] chunk
 - [x] compact
 - [ ] drop
 - [ ] dropWhile
 - [x] flatten
-- [ ] flattenDepth
+- [x] flattenDepth
 - [ ] head
 - [ ] take
 - [ ] takeWhile
