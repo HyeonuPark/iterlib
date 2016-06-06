@@ -1,6 +1,6 @@
 {
   "name": "iterlib",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Iterator utilities for function-bind syntax",
   "main": "bin/index.js",
   "scripts": {
