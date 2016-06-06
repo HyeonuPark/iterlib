@@ -97,6 +97,50 @@ for (let [x, y, z] of product(range(1), range(2), range(3))) {
 
 Virtual methods that generate another iterator
 
+### ::chunk()
+
+Iterate groups of elements with given size
+
+#### Rule
+
+- `iterable::chunk(size)`
+
+#### Usage
+
+```js
+import {chunk} from 'iterlib'
+
+const posData = [0, 0, 0, 1, 1, 0, 0, 2, 1, 1, 2, 0, 0, 3, 1, 2, 2, 1, 3, 0]
+
+for (let [x, y] of posData::chunk(2)) {
+  console.log(`(${x}, ${y})`)
+}
+
+// result: (0, 0) (0, 1) (1, 0) (0, 2) (1, 1) ...
+```
+
+### ::compact()
+
+Strip falsey values
+
+#### Rule
+
+- `iterable::compact()`
+
+#### Usage
+
+```js
+import {compact} from 'iterlib'
+
+const array = [3, 0, false, 'foo', '', null]
+
+for (let elem of array::compact()) {
+  console.log(elem)
+}
+
+// result: 3 foo
+```
+
 ### ::concat()
 
 Just like `Array#concat`
@@ -262,6 +306,26 @@ function allFOO () {
 
 allFOO('FOO', 'FOO', 'FOO') // true
 allFOO('FOO', 'Foo', 'foo') // false
+```
+
+### ::find()
+
+Just like `Array#find`
+
+#### Rule
+
+- `iterable::find(element => isOk)`
+
+#### Usage
+
+```js
+import {find} from 'iterlib'
+
+const names = new Set(['Andrew', 'Anthony', 'Ada'])
+
+console.log(names::find(name => /w/.test(name)))
+
+// result: Andrew
 ```
 
 ### ::reduce()
