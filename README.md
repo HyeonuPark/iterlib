@@ -343,7 +343,7 @@ wrapArray(3, 4, 5) // [3, 4, 5]
 - [x] concat
 - [x] every
 - [x] filter
-- [ ] find
+- [x] find
 - [x] map
 - [x] reduce
 - [x] some

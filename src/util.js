@@ -1,5 +1,3 @@
-'use strict'
-
 export const itersym = Symbol.iterator
 
 export function isIterable (maybeIterable) {

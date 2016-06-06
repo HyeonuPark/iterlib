@@ -1,5 +1,5 @@
 import {resolve} from './resolve'
-import {assertType, itersym, getSelf} from './util'
+import {assertType, itersym, getSelf, doneTrue} from './util'
 
 export function filter (callback) {
   assertType(callback, 'function', '::filter() callback')
@@ -16,7 +16,7 @@ export function filter (callback) {
     },
     next () {
       if (isDone) {
-        return {done: true}
+        return doneTrue
       }
 
       let {done, value} = iterator.next()
