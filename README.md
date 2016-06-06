@@ -121,7 +121,7 @@ Just like `Array#filter`
 
 #### Rule
 
-- `iterable::filter(callback)`
+- `iterable::filter(element => shouldPass)`
 
 #### Usage
 
@@ -141,7 +141,7 @@ Allow multiple replacement to ::map(), same as ::map()::flatten()
 
 #### Rule
 
-- `iterable::flatMap(callback)`
+- `iterable::flatMap(element => iterable)`
 
 #### Usage
 
@@ -225,7 +225,7 @@ Just like `Array#map`
 
 #### Rule
 
-- `iterable::map(callback)`
+- `iterable::map(element => newElement)`
 
 #### Usage
 
@@ -249,7 +249,7 @@ Just like `Array#every`
 
 #### Rule
 
-- `iterable::every(callback)` -> true if every elements are passed the callback, otherwise false
+- `iterable::every(element => isOk)` -> true if every elements are passed the callback, otherwise false
 
 #### Usage
 
@@ -270,7 +270,7 @@ Just like `Array#reduce`
 
 #### Rule
 
-- `iterable::reduce(reducer[, initValue])`
+- `iterable::reduce((previous, current) => next[, initValue])`
 
 #### Usage
 
@@ -290,7 +290,7 @@ Just like `Array#some`
 
 #### Rule
 
-- `iterable::some(callback)` -> false if every elements are failed the callback, otherwise true
+- `iterable::some(element => isOk)` -> false if every elements are failed the callback, otherwise true
 
 #### Usage
 
