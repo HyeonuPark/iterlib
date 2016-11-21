@@ -21,7 +21,7 @@ export function map (callback) {
         isDone = true
       }
 
-      return {done, value: callback(value)}
+      return {done, value: done ? undefined : callback(value)}
     }
   }
 }
